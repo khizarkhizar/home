@@ -1,40 +1,40 @@
 {
   "backgroundType": "gradient",
   "plainBackgroundMode": "daylight",
-  "devIntro": "Hashir Shoaib",
-  "devDesc": "| Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
+  "devIntro": "Khizer Hayat",
+  "devDesc": "Computer Engineer",
   "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
   "icons": [
     {
       "id": 0,
       "image": "fa-github",
-      "url": "https://github.com/hashirshoaeb",
+      "url": "https://github.com/khizarkhizar/",
       "style": "socialicons"
     },
     {
       "id": 1,
       "image": "fa-facebook",
-      "url": "https://www.facebook.com/hashir.shoaeb",
+      "url": "https://www.facebook.com/rana.khizar.3766",
       "style": "socialicons"
     },
     {
       "id": 2,
       "image": "fa-instagram",
-      "url": "https://www.instagram.com/hashir.shoaeb/",
+      "url": "https://www.instagram.com/ranakhizar786/",
       "style": "socialicons"
     },
     {
       "id": 3,
       "image": "fa-linkedin",
-      "url": "https://www.linkedin.com/in/hashir-shoaeb/",
+      "url": "https://www.linkedin.com/in/muhammad-khizar-477310150/",
       "style": "socialicons"
     }
   ],
   "instaLink": "https://www.instagram.com/",
-  "instaUsername": "hashir.shoaeb",
+  "instaUsername": "ranakhizar786",
   "instaQuerry": "/?__a=1",
-  "aboutDev": "An Engineer who is a former Intern at RiseTech. He holds a Bachelor's degree in Computer Engineering from National University of Sciences and Technology. He has keen interest in Robotics, and recently working on his Final Year Project. He also has three years' experience in Web Development, working in crossfunctional teams and using mulitple web platforms. Hashir is passionate about teaching machines how to think.",
+  "aboutDev": "A passionate Engineer who is looking for decent development related job. Has has skills in web-delelopment, and currently working on Angular.",
   "gitHubLink": "https://api.github.com/users/",
-  "gitHubUsername": "hashirshoaeb",
+  "gitHubUsername": "khizarkhizar",
   "gitHubQuerry": "/repos?sort=updated&direction=desc"
 }
