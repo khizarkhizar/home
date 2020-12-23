@@ -15,7 +15,7 @@ class MainBody extends Component {
       backgroundType: Configs.backgroundType,
       devInfo: Configs.devIntro,
       devDesc: Configs.devDesc,
-      hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"]
+      hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"],
     };
   }
   componentDidMount = () => {
@@ -25,11 +25,11 @@ class MainBody extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   };
 
-  handleScroll = e => {
+  handleScroll = (e) => {
     //this.setState({ devInfo: "Hashir Shoaib" });
     // console.log("scroll trigered");
   };
-  toggleHover = data => {
+  toggleHover = (data) => {
     const newhoverStatus = [...this.state.hoverstatus];
     if (data.event === "enter") {
       newhoverStatus[data.icon.id] = "socialiconshover";
@@ -58,7 +58,7 @@ class MainBody extends Component {
             </h1>
             <Typist className="lead"> {this.state.devDesc}</Typist>
             <div className=" p-5">
-              {icons.map(icon => (
+              {icons.map((icon) => (
                 <a
                   key={icon.id}
                   target="_blank"
@@ -99,28 +99,28 @@ class AboutMe extends Component {
     this.state = {
       heading: "About me",
       aboutDev: Configs.aboutDev,
-      instaProfilePic: "bad request"
+      instaProfilePic: "bad request",
     };
   }
   componentDidMount = () => {
     this.handleRequest();
   };
 
-  handleRequest = e => {
+  handleRequest = (e) => {
     axios
       .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
-      .then(response => {
+      .then((response) => {
         // handle success
         // console.log(response.data.graphql);
         this.setState({
-          instaProfilePic: response.data.graphql.user.profile_pic_url_hd
+          instaProfilePic: response.data.graphql.user.profile_pic_url_hd,
         });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // handle error
         console.log(error);
       })
-      .finally(function() {
+      .finally(function () {
         // always executed
       });
   };
@@ -154,28 +154,28 @@ class Project extends Component {
     super(props);
     this.state = {
       heading: "Recent Projects",
-      projectsArray: []
+      projectsArray: [],
     };
   }
   componentDidMount = () => {
     this.handleRequest();
   };
 
-  handleRequest = e => {
+  handleRequest = (e) => {
     axios
       .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
-      .then(response => {
+      .then((response) => {
         // handle success
         // console.log(response.data.slice(0, 4));
         this.setState({
-          projectsArray: response.data.slice(0, 4)
+          projectsArray: response.data.slice(0, 4),
         });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // handle error
         console.log(error);
       })
-      .finally(function() {
+      .finally(function () {
         // always executed
       });
   };
@@ -189,7 +189,7 @@ class Project extends Component {
         <div className=" container container-fluid p-5">
           <h1 className="display-4 pb-5">{this.state.heading}</h1>
           <div className=" row">
-            {this.state.projectsArray.map(project => (
+            {this.state.projectsArray.map((project) => (
               <ProjectCard
                 key={project.id}
                 id={project.id}
@@ -211,7 +211,7 @@ class ProjectCard extends Component {
       updated_at: "0 mints",
       stargazers_count: this.props.value.stargazers_count,
       download_url: this.props.value.svn_url + "/archive/master.zip",
-      repo_url: this.props.value.svn_url
+      repo_url: this.props.value.svn_url,
     };
   }
   componentDidMount = () => {
@@ -238,13 +238,13 @@ class ProjectCard extends Component {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ];
       var day = date.getDate();
       var monthIndex = date.getMonth();
       var year = date.getFullYear();
       this.setState({
-        updated_at: "on " + day + " " + monthNames[monthIndex] + " " + year
+        updated_at: "on " + day + " " + monthNames[monthIndex] + " " + year,
       });
     }
   };
@@ -292,7 +292,7 @@ class ProjectCard extends Component {
 
 class Language extends Component {
   state = {
-    data: []
+    data: [],
   };
   componentDidMount = () => {
     this.handleRequest();
@@ -301,16 +301,16 @@ class Language extends Component {
   handleRequest = () => {
     axios
       .get(this.props.value)
-      .then(response => {
+      .then((response) => {
         // handle success
         // console.log(response.data);
         this.setState({ data: response.data });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // handle error
         console.log(error);
       })
-      .finally(function() {
+      .finally(function () {
         // always executed
       });
   };
@@ -327,7 +327,7 @@ class Language extends Component {
     return (
       <div className="pb-3">
         Languages:{" "}
-        {array.map(language => (
+        {array.map((language) => (
           <a key={language} className="badge badge-light card-link">
             {language}:{" "}
             {Math.trunc((this.state.data[language] / total_count) * 1000) / 10}{" "}
@@ -343,7 +343,7 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bgStyle: { backgroundColor: "#f5f5f5" }
+      bgStyle: { backgroundColor: "#f5f5f5" },
     };
   }
   render() {
@@ -354,18 +354,11 @@ class Footer extends Component {
         <a
           className=" badge badge-dark"
           target="_blank"
-          href={"https://github.com/hashirshoaeb"}
+          href={"https://github.com/khizarkhizar"}
         >
-          Hashir Shoaib
+          Muhammad Khizar Hayyat
         </a>{" "}
-        using <i className="fab fa-react"></i>
-        <p>
-          <small className="text-muted">
-            {" "}
-            Project code is open source. Feel free to fork and make your own
-            version.
-          </small>
-        </p>
+        
       </footer>
     );
   }
